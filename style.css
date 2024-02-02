@@ -1,0 +1,83 @@
+html {
+    background-color: #efefef;
+}
+
+/* Account Panel */
+
+#account_panel {
+    height: 20px;
+    width: calc(100% - 250px);
+    float: left;
+    padding: 5px;
+}
+
+#account_panel a {
+    float: right;
+    margin-left: 10px;
+}
+
+#account_panel #login_status_text {
+    float: right;
+}
+
+/* Navigation Panel */
+
+#nav_panel {
+    width: 200px;
+    height: 100%;
+    float: left;
+    padding: 10px;
+}
+
+#nav_panel a {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#nav_panel hr {
+    height: 1px;
+    margin: 10px 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), color-stop(0.5, #333333), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+    border: 0;
+  }
+#nav_panel hr:after {
+    display: block;
+    content: '';
+    height: 30px;
+    background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Main Panel */
+
+#main_panel {
+    width: calc(100% - 250px);
+    height: auto;
+    float: left;
+    padding: 5px;
+    border: 1px solid #7070d5;
+    background-color: white;
+}
+
+#main_panel hr {
+    height: 1px;
+    margin: 10px 0;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(0.5, #333333), color-stop(0.5, #333333), to(#333333));
+    background: -webkit-linear-gradient(left, #333333, #333333, #333333);
+    background: -moz-linear-gradient(left, #333333, #333333, #333333);
+    background: -o-linear-gradient(left, #333333, #333333, #333333);
+    background: linear-gradient(left, #333333, #333333, #333333);
+    border: 0;
+  }
+#main_panel hr:after {
+    display: block;
+    content: '';
+    height: 30px;
+}

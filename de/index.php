@@ -27,13 +27,17 @@
         <hr>
         <a href="neu.php">Neuen Artikel anlegen</a><br>
         <a href="edit.php">Artikel editieren</a><br>
-        <!--<a href="autorenportal.php">Autorenportal</a><br>-->
         <a href="hilfe.php">Hilfe</a><br>
         <a href="kontakt.php">Kontakt</a><br>
         <a href="spenden.php">Spenden</a><br>
         <hr>
         <a href="index.php">Deutsch</a><br>
         <a href="../en/index.php">English</a><br>
+        <?php
+            if($loggedin == true && $_SESSION['userprivileges'] > 1){
+                echo "<hr><a href=\"../admin/panel.php\">Admin Panel</a>";
+            }
+        ?>
     </div>
     <div id="account_panel">
         <?php

@@ -34,6 +34,11 @@
         <hr>
         <a href="index.php">Deutsch</a><br>
         <a href="../en/index.php">English</a><br>
+        <?php
+            if($loggedin == true && $_SESSION['userprivileges'] > 1){
+                echo "<hr><a href=\"../admin/panel.php\">Admin Panel</a>";
+            }
+        ?>
     </div>
     <div id="account_panel">
         <?php

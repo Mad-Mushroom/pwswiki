@@ -2,9 +2,11 @@
     <title>PWS Wiki</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="../style.css">
+    <meta http-equiv="refresh" content="0; url=../de/index.php"/>
 </head>
 <body>
-    <div id="nav_panel">
+    <h1>Redirecting...</h1>
+    <!--<div id="nav_panel">
         <img src="img/pws_logo_t.png" alt="Logo" width="200" height="150">
         <a href="index.php">Main Page</a><br>
         <a href="de/themenportal.php">Contents</a><br>
@@ -27,5 +29,5 @@
     </div>
     <div id="main_panel">
         <h1>English PWS Wiki is still under development! :)</h1>
-    </div>
+    </div>-->
 </body>

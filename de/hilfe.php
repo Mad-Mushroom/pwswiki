@@ -51,5 +51,8 @@
     <div id="main_panel">
         <h1>Hilfe</h1>
         <hr>
+        <h2>Fragen & Antworten</h2>
+        <h4>Wie kann ich Artikel erstellen?</h4><p>Zurzeit ist es leider nicht möglich Artikel zu erstellen, wenn man kein Admin ist. Wir werden aber noch eine Funktion dafür hinzufügen ;)</p>
+        <h4>Wie kann ich Artikel editieren?</h4><p>Zurzeit ist es leider auch nicht möglich Artikel, ohne Admin Account, zu editieren.</p>
     </div>
 </body>

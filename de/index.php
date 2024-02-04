@@ -51,6 +51,14 @@
     <div id="main_panel">
         <h1>Hauptseite</h1>
         <hr>
-        <p>Ich habe keine Ahnung was ich hier einfügen soll...</p>
+        <p>Das Wiki über alles in der Paul-Winter Realschule Neuburg an der Donau!</p>
+        <h2>Über uns</h2>
+        <p>Unser Team besteht zurzeit aus 2 Personen, wir gehen beide auf die Paul-Winter Realschule.</p>
+        <h3>Technische Daten</h3>
+        <p>Die Website wurde in php geschrieben, manche Teile sind aber (natürlich) auch mit HTML/css geschrieben.</p>
+        <p>Zurzeit wird die Website auf einem Raspberry Pi 3 B+ gehostet.</p>
+        <a href="https://github.com/Mad-Mushroom/pwswiki">GitHub Page</a>
+        <br><hr>
+        <p>Copyright &#169; 2024 PWS-Wiki Team</p>
     </div>
 </body>

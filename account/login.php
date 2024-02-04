@@ -63,7 +63,7 @@
                 if($email == $row['email'] && $password == safeDecrypt($row['password'], $edkey)){
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
-                    $_SESSION['userprivileges'] = $row['privileges'];
+                    $_SESSION['userprivileges'] = (int)$row['privileges'];
                     header("Location: ../index.php");
                 }
             }

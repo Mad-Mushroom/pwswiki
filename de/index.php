@@ -8,6 +8,7 @@
         if($_GET['logout'] == 1){
             unset($_SESSION['id']);
             unset($_SESSION['username']);
+            unset($_SESSION['userprivileges']);
         }
         $loggedin = false;
         $username = "Nicht angemeldet";

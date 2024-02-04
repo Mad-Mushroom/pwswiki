@@ -68,7 +68,7 @@
                 $pdo->query("INSERT INTO `login` (`id`, `username`, `email`, `password`, `privileges`) VALUES ('" . $id . "', '" . $name . "', '" . $email . "', '" . safeEncrypt($password, $edkey) . "', '0')");
                 $_SESSION['id'] = $id;
                 $_SESSION['username'] = $name;
-                $_SESSION['userprivileges'] = 0;
+                $_SESSION['userprivileges'] = (int)0;
                 header("Location: ../index.php");
             }
         ?>

@@ -12,7 +12,7 @@
         }
         $loggedin = false;
         $username = "Nicht angemeldet";
-        if($_SESSION['id'] != 0){
+        if($_SESSION['id'] != 0 && $_SESSION['userprivileges'] > 1){
             $id = $_SESSION['id'];
             $username = $_SESSION['username'];
             $loggedin = true;

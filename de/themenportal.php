@@ -50,7 +50,7 @@
         <?php
             $allgemein = "<h2>Allgemein</h2>";
             $schule_schulleben = "<h2>Schule & Schulleben</h2>";
-            $lehrer = "<h2>Lehrer</h2>";
+            $lehrer = "<h2>Lehrkräfte</h2>";
             $other = "<h2>Sonstiges</h2>";
             foreach ($pdo->query("SELECT * FROM articles") as $row) {
                 if($row['topic'] == "Schule & Schulleben"){

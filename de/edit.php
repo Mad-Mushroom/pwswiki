@@ -10,7 +10,7 @@
             unset($_SESSION['id']);
             unset($_SESSION['username']);
         }
-        if($_GET['id'] == NULL){
+        if($_GET['id'] == NULL || $_SESSION['userprivileges'] <= 1){
             header("Location: index.php");
         }
         $loggedin = false;

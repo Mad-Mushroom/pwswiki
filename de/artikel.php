@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="../style.css">
     <?php
         error_reporting(E_ERROR | E_PARSE);
-        session_start();
         $pdo = new PDO('mysql:host=localhost;dbname=wiki;charset=utf8', 'root', '');
+        session_start();
         if($_GET['logout'] == 1){
             unset($_SESSION['id']);
             unset($_SESSION['username']);
@@ -26,7 +26,7 @@
         <a href="themenportal.php">Themenportal</a><br>
         <hr>
         <a href="neu.php">Neuen Artikel anlegen</a><br>
-        <a href="edit.php">Artikel editieren</a><br>
+        <a href="edit.php?id=<?php echo $_GET['id']; ?>">Artikel editieren</a><br>
         <!--<a href="autorenportal.php">Autorenportal</a><br>-->
         <a href="hilfe.php">Hilfe</a><br>
         <a href="kontakt.php">Kontakt</a><br>
@@ -45,29 +45,12 @@
         ?>
     </div>
     <div id="main_panel">
-        <h1>Themenportal</h1>
-        <hr>
         <?php
-            $allgemein = "<h2>Allgemein</h2>";
-            $schule_schulleben = "<h2>Schule & Schulleben</h2>";
-            $lehrer = "<h2>Lehrer</h2>";
-            $other = "<h2>Sonstiges</h2>";
             foreach ($pdo->query("SELECT * FROM articles") as $row) {
-                if($row['topic'] == "Schule & Schulleben"){
-                    $schule_schulleben = $schule_schulleben . "<a href=\"artikel.php?id=" . $row['id'] . "\">" . $row['heading'] . "</a>";
-                }else if($row['topic'] == "Allgemein"){
-                    $allgemein = $allgemein . "<a href=\"artikel.php?id=" . $row['id'] . "\">" . $row['heading'] . "</a>";
-                }else if($row['topic'] == "Lehrer"){
-                    $lehrer = $lehrer . "<a href=\"artikel.php?id=" . $row['id'] . "\">" . $row['heading'] . "</a>";
-                }else{
-                    $other = $other . "<a href=\"artikel.php?id=" . $row['id'] . "\">" . $row['heading'] . "</a>";
+                if($row['id'] == $_GET['id']){
+                    echo "<h1>" . $row['heading'] . "</h1><hr>". $row['content'] . "<hr>" . $row['sources'] . "<hr>" . "<p>" . $row['author'] . "</p><p>" . $row['creationdate'] . "</p>";
                 }
             }
-
-            echo $allgemein;
-            echo $schule_schulleben;
-            echo $lehrer;
-            echo $other;
         ?>
     </div>
 </body>

@@ -54,7 +54,7 @@
             <input type="text" name="header" placeholder="Überschrift"/><br><br>
             <input type="text" name="topic" placeholder="Thema"/><br><br>
             <input type="text" name="author" placeholder="Author"/><br><br>
-            <textarea name="quickfacts" placeholder="Quickfacts" ></textarea><br><br>
+            <textarea name="quickfacts" placeholder="Quickfacts"></textarea><br><br>
             <textarea name="content" placeholder="Inhalt" ></textarea><br><br>
             <textarea name="sources" placeholder="Quellen" ></textarea><br><br>
             <input type="submit" name="submit" value="Erstellen" />
@@ -73,8 +73,8 @@
             $content = $_POST['content'];
             $sources = $_POST['sources'];
             //echo "INSERT INTO `articles` (`id`, `heading`, `topic`, `author`, `creationdate`, `quickfacts`, `content`, `sources`) VALUES ('" . $id . "', '" . $heading . "', '" . $topic . "', '" . $author . "', '" . $creationdate . "', '" . $quickfacts . "', '" . $content . "', '" . $sources . "')";
-            $pdo->query("INSERT INTO `articles` (`id`, `heading`, `topic`, `author`, `creationdate`, `quickfacts`, `content`, `sources`) VALUES ('" . $id . "', '" . $heading . "', '" . $topic . "', '" . $author . "', '" . $creationdate . "', '" . $quickfacts . "', '" . $content . "', '" . $sources . "')");
-            header("Location: index.php");
+            if($heading != NULL) $pdo->query("INSERT INTO `articles` (`id`, `heading`, `topic`, `author`, `creationdate`, `quickfacts`, `content`, `sources`) VALUES ('" . $id . "', '" . $heading . "', '" . $topic . "', '" . $author . "', '" . $creationdate . "', '" . $quickfacts . "', '" . $content . "', '" . $sources . "')");
+            if($heading != NULL) header("Location: index.php");
         ?>
     </div>
 </body>

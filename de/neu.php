@@ -5,6 +5,7 @@
     <?php
         error_reporting(E_ERROR | E_PARSE);
         session_start();
+        $pdo = new PDO('mysql:host=localhost;dbname=wiki;charset=utf8', 'root', '');
         if($_GET['logout'] == 1){
             unset($_SESSION['id']);
             unset($_SESSION['username']);
@@ -48,9 +49,32 @@
     <div id="main_panel">
         <h1>Neuen Artikel erstellen</h1>
         <hr>
-        <form action="neu.php" method="post">
-            <input type="input" name="header" placeholder="Header"/><br>
-        <br><input type="submit" name="submit" value="Erstellen" />
+        <form action="neu.php" method="post" id="create_form">
+            <input type="date" name="date"/><br><br>
+            <input type="text" name="header" placeholder="Überschrift"/><br><br>
+            <input type="text" name="topic" placeholder="Thema"/><br><br>
+            <input type="text" name="author" placeholder="Author"/><br><br>
+            <textarea name="quickfacts" placeholder="Quickfacts" ></textarea><br><br>
+            <textarea name="content" placeholder="Inhalt" ></textarea><br><br>
+            <textarea name="sources" placeholder="Quellen" ></textarea><br><br>
+            <input type="submit" name="submit" value="Erstellen" />
         </form>
+
+        <?php
+            $id = 0;
+            foreach ($pdo->query("SELECT * FROM articles") as $row) {
+                $id = ++$row['id'];
+            }
+            $heading = $_POST['header'];
+            $topic = $_POST['topic'];
+            $author = $_POST['author'];
+            $creationdate = $_POST['date'];
+            $quickfacts = $_POST['quickfacts'];
+            $content = $_POST['content'];
+            $sources = $_POST['sources'];
+            //echo "INSERT INTO `articles` (`id`, `heading`, `topic`, `author`, `creationdate`, `quickfacts`, `content`, `sources`) VALUES ('" . $id . "', '" . $heading . "', '" . $topic . "', '" . $author . "', '" . $creationdate . "', '" . $quickfacts . "', '" . $content . "', '" . $sources . "')";
+            $pdo->query("INSERT INTO `articles` (`id`, `heading`, `topic`, `author`, `creationdate`, `quickfacts`, `content`, `sources`) VALUES ('" . $id . "', '" . $heading . "', '" . $topic . "', '" . $author . "', '" . $creationdate . "', '" . $quickfacts . "', '" . $content . "', '" . $sources . "')");
+            header("Location: index.php");
+        ?>
     </div>
 </body>

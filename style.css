@@ -81,3 +81,9 @@ html {
     content: '';
     height: 30px;
 }
+
+/* Other */
+
+#create_form input, #create_form textarea{
+    width: 100%;
+}

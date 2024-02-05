@@ -52,6 +52,10 @@
         <h1>Hauptseite</h1>
         <hr>
         <p>Das Wiki über alles in der Paul-Winter Realschule Neuburg an der Donau!</p>
+        <h2 style="color: red;">ACHTUNG</h2>
+        <p>Die Website wird zurzeit noch entwickelt, sie ist NICHT fertig.</p>
+        <p>Viele Funktionen & Features sind nicht fertig, oder funktionieren nicht richtig!</p>
+        <p>Status: ALPHA</p>
         <h2>Über uns</h2>
         <p>Unser Team besteht zurzeit aus 2 Personen, wir gehen beide auf die Paul-Winter Realschule.</p>
         <h3>Technische Daten</h3>

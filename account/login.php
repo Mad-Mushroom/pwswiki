@@ -9,7 +9,7 @@
         
         <?php
             error_reporting(E_ERROR | E_PARSE);
-            $pdo = new PDO('mysql:host=http://89.38.116.27;dbname=wiki;charset=utf8', 'root', '');
+            $pdo = new PDO('mysql:host=localhost;dbname=wiki;charset=utf8', 'root', '');
             $edkey = "FU625x3BYr2HIgTNzfkz76BdAGeoTOVg";
             session_start();
 

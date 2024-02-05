@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Quizduell - Login</title>
+        <title>PWS Wiki - Login</title>
         <link rel="stylesheet" href="style/login.css">
         <link rel = "icon" href="../img/icon.png" type = "image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
